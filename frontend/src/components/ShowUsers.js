@@ -14,7 +14,7 @@ class showUsers extends Component {
 
     componentDidMount() {
         axios
-            .get('http://localhost:8082/api/users')
+            .get('http://khaosmc.asuscomm.com:8082/api/users')
             .then(res => {
                 this.setState({
                     users: res.data

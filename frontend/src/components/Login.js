@@ -26,7 +26,7 @@ class Register extends Component {
         };
 
         axios
-            .get('http://localhost:8082/api/users')
+            .get('http://khaosmc.asuscomm.com:8082/api/users')
             .then(res => {
                 let theData = res.data;
                 for (let i = 0; i < theData.length; i++) {

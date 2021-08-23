@@ -26,7 +26,7 @@ class Register extends Component {
         };
 
         axios
-            .post('http://localhost:8082/api/users', data)
+            .post('http://khaosmc.asuscomm.com:8082/api/users', data)
             .then(res => {
                 this.setState({
                     username: '',

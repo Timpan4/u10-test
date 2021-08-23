@@ -19,7 +19,7 @@ class User extends Component {
 
     componentDidMount() {
         axios
-            .get('http://localhost:8082/api/users/' + this.props.match.params.id)
+            .get('http://khaosmc.asuscomm.com:8082/api/users/' + this.props.match.params.id)
             .then(res => {
                 this.setState({
                     user: res.data
@@ -30,7 +30,7 @@ class User extends Component {
             });
         console.log(this.props);
         axios
-            .get('http://localhost:8082/api/comments/' + this.props.match.params.id)
+            .get('http://khaosmc.asuscomm.com:8082/api/comments/' + this.props.match.params.id)
             .then(res => {
                 this.setState({
                     comments: res.data
@@ -50,7 +50,7 @@ class User extends Component {
             description: this.state.description
         };
         axios
-            .post('http://localhost:8082/api/comments', data)
+            .post('http://khaosmc.asuscomm.com:8082/api/comments', data)
             .then(res => {
                 this.setState({
                     comments: []
@@ -65,7 +65,7 @@ class User extends Component {
 
     onDeleteClick(id) {
         axios
-            .delete('http://localhost:8082/api/users/' + id)
+            .delete('http://khaosmc.asuscomm.com:8082/api/users/' + id)
             .then(res => {
                 this.props.history.push("/");
             })
